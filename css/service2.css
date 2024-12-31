@@ -1,0 +1,145 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c; /* Dark background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Set flex direction to column */
+    min-height: 100vh; /* Ensure the body takes at least the full height of the screen */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #111;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 0;
+}
+
+.nav ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Service Section */
+.service {
+    text-align: center;
+    padding: 4rem 1rem;
+    flex-grow: 1; /* This ensures the service section takes up remaining space */
+    margin-top: 5rem; /* Add margin-top to account for fixed header */
+}
+
+.service h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.file-upload input[type="file"] {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#file-name {
+    color: #fff;
+}
+
+.file-upload input[type="file"]:hover {
+    background-color: #ff7043;
+}
+
+.btn {
+    background-color: #ff5722; /* Changed button color to match the new theme */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff7043;
+}
+
+.summary-section {
+    margin-top: 2rem;
+    text-align: left;
+    color: #fff;
+}
+
+.summary-section h2 {
+    font-size: 1.5rem;
+    color: #ff5722;
+}
+
+#summary-text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* Push footer to the bottom of the screen */
+}

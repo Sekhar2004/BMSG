@@ -1,0 +1,94 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c; /* Dark background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Set flex direction to column */
+    min-height: 100vh; /* Ensure the body takes at least the full height of the screen */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Service Section */
+.service {
+    text-align: center;
+    padding: 4rem 1rem;
+    flex-grow: 1; /* This ensures the service section takes up remaining space */
+    margin-top: 5rem; /* Add margin-top to account for fixed header */
+}
+
+.service h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+label {
+    font-size: 1rem;
+}
+
+input[type="file"] {
+    margin: 1rem 0;
+}
+
+#file-name {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.btn {
+    background-color: #ff5722; /* Changed button color to match the new theme */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff7043;
+}
+
+#summary-section {
+    margin-top: 2rem;
+    text-align: left;
+    color: #f0f0f0;
+}
+
+#summary-section h3 {
+    margin-bottom: 0.5rem;
+}
+
+#summary-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* Push footer to the bottom of the screen */
+}

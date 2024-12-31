@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Agenda - BMSG</title>
+    <link rel="stylesheet" href="css/service3.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-square-poll-horizontal"></i> BMSG
+                </a>
+            </h1>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service1.html">Audio to Text</a></li>
+                    <li><a href="service2.html">Summarize Audio</a></li>
+                    <li><a href="service3.html">Meeting Agenda</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="service">
+        <div class="container">
+            <h1>Meeting Agenda</h1>
+            <p>A straightforward indication of the topics covered in your meetings.</p>
+            <form id="audio-form">
+                <label for="audio-upload">Upload Your Audio file:</label>
+                <input type="file" id="audio-upload" name="audio-upload" accept="audio/*">
+                <span id="file-name">No file selected</span>
+                <button type="submit" class="btn">Summarize</button>
+            </form>
+            <div id="summary-section" style="display: none;">
+                <h3>Main Theme:</h3>
+                <p id="main-theme">How do we learn to drive without human intervention?</p>
+                <h3>Summary:</h3>
+                <p id="summary">an LeCoon is the chief Al scientist at Metta. formerly Facebook, professor at NYU. he is one of the seminal figures in the history of machine learning and artificial intelligence. you co-wrote the article, Self-Supervised Learning, the dark matter of intelligence. reinforcement learning is not being reinforced for anything, it's just observing the world and figuring out how it works. so self-</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>BMSG &copy; 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Display the selected file name
+        document.getElementById('audio-upload').addEventListener('change', function(e) {
+            const fileName = e.target.files.length > 0 ? e.target.files[0].name : 'No file selected';
+            document.getElementById('file-name').textContent = fileName;
+        });
+
+        // Handle form submission
+        document.getElementById('audio-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+            // For demonstration, simply show the summary
+            document.getElementById('summary-section').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
