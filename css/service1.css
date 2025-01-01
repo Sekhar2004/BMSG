@@ -198,4 +198,104 @@ textarea#transcript-text:disabled {
     .file-upload input[type="file"], .btn {
         padding: 0.5rem 1rem;
     }
+
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .file-upload {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.75rem 0;
+    }
+
+    textarea#transcript-text {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header - Reduce font size for smaller screens */
+    .nav ul {
+        gap: 15px; /* Reduce gap between nav items */
+    }
+
+    .nav ul li a {
+        font-size: 1rem; /* Smaller font size */
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Service Section */
+    .service {
+        padding: 3rem 1rem; /* Reduce padding to fit smaller screens */
+    }
+
+    .service h1 {
+        font-size: 1.8rem; /* Slightly smaller for mobile screens */
+    }
+
+    .service p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    .file-upload input[type="file"], .btn {
+        padding: 0.5rem 1rem; /* Keep buttons smaller on mobile */
+    }
+
+    .footer {
+        padding: 1rem; /* Reduce footer padding */
+    }
+
+    /* Transcript Section */
+    textarea#transcript-text {
+        height: 200px; /* Reduce the height on smaller devices */
+        font-size: 0.9rem; /* Reduce font size in textarea */
+    }
+
+    .file-upload {
+        flex-direction: column; /* Stack the file upload inputs vertically */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .file-upload input[type="file"] {
+        width: 100%; /* Make file input full width */
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .service {
+        padding: 2rem 0.5rem; /* Reduce padding even further */
+    }
+
+    .service h1 {
+        font-size: 1.5rem; /* Slightly smaller heading on very small screens */
+    }
+
+    .service p {
+        font-size: 0.9rem; /* Make text a bit smaller */
+    }
+
+    .footer {
+        padding: 0.8rem 0.5rem; /* Reduce footer padding */
+    }
+
+    .file-upload {
+        flex-direction: column; /* Stack the file upload inputs vertically */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .file-upload input[type="file"] {
+        width: 100%; /* Make file input full width */
+        padding: 0.5rem;
+    }
+
+    .btn {
+        padding: 1rem; /* Ensure button has enough padding on small screens */
+    }
 }
