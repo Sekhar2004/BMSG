@@ -299,3 +299,16 @@ textarea#transcript-text:disabled {
         padding: 1rem; /* Ensure button has enough padding on small screens */
     }
 }
+.summary, .agenda {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}

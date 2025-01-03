@@ -34,20 +34,23 @@
         <div class="container">
             <h1>Summarize the Audio</h1>
             <p>From rambling riffs to insightful briefs. Get a concise summary of your audio files.</p>
+    
             <form>
-                <label for="audio-upload">Upload Your Audio File</label>
+                <label for="audio-upload">Upload Your Audio File:</label>
                 <div class="file-upload">
-                    <input type="file" id="audio-upload" name="audio-upload" accept="audio/*" onchange="updateFileName()">
+                    <input type="file" id="audio-upload" name="audio-upload" accept="audio/*">
                     <span id="file-name">No file selected</span>
                 </div>
                 <button type="submit" class="btn">Summarize</button>
             </form>
-            <div class="summary-section">
+    
+            <div class="summary">
                 <h2>Summary:</h2>
-                <p id="summary-text">Your summary will appear here.</p>
+                <textarea id="summary-text" placeholder="Your summary will appear here..." disabled></textarea>
             </div>
         </div>
     </section>
+    
 
     <footer class="footer">
         <div class="container">

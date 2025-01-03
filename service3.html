@@ -33,20 +33,26 @@
         <div class="container">
             <h1>Meeting Agenda</h1>
             <p>A straightforward indication of the topics covered in your meetings.</p>
-            <form id="audio-form">
-                <label for="audio-upload">Upload Your Audio file:</label>
-                <input type="file" id="audio-upload" name="audio-upload" accept="audio/*">
-                <span id="file-name">No file selected</span>
-                <button type="submit" class="btn">Summarize</button>
+    
+            <form>
+                <label for="audio-upload">Upload Your Audio File:</label>
+                <div class="file-upload">
+                    <input type="file" id="audio-upload" name="audio-upload" accept="audio/*">
+                    <span id="file-name">No file selected</span>
+                </div>
+                <button type="submit" class="btn">Generate Agenda</button>
             </form>
-            <div id="summary-section" style="display: none;">
-                <h3>Main Theme:</h3>
-                <p id="main-theme">How do we learn to drive without human intervention?</p>
-                <h3>Summary:</h3>
-                <p id="summary">an LeCoon is the chief Al scientist at Metta. formerly Facebook, professor at NYU. he is one of the seminal figures in the history of machine learning and artificial intelligence. you co-wrote the article, Self-Supervised Learning, the dark matter of intelligence. reinforcement learning is not being reinforced for anything, it's just observing the world and figuring out how it works. so self-</p>
+    
+            <div class="agenda">
+                <h2>Main Theme:</h2>
+                <textarea id="main-theme-text" placeholder="Main theme of the meeting will appear here..." disabled></textarea>
+    
+                <h2>Agenda:</h2>
+                <textarea id="agenda-text" placeholder="Meeting agenda will appear here..." disabled></textarea>
             </div>
         </div>
     </section>
+    
 
     <footer class="footer">
         <div class="container">
