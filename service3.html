@@ -34,7 +34,7 @@
             <h1>Meeting Agenda</h1>
             <p>A straightforward indication of the topics covered in your meetings.</p>
     
-            <form>
+            <form id="audio-form">
                 <label for="audio-upload">Upload Your Audio File:</label>
                 <div class="file-upload">
                     <input type="file" id="audio-upload" name="audio-upload" accept="audio/*">
@@ -52,7 +52,6 @@
             </div>
         </div>
     </section>
-    
 
     <footer class="footer">
         <div class="container">
@@ -61,17 +60,27 @@
     </footer>
 
     <script>
-        // Display the selected file name
-        document.getElementById('audio-upload').addEventListener('change', function(e) {
-            const fileName = e.target.files.length > 0 ? e.target.files[0].name : 'No file selected';
-            document.getElementById('file-name').textContent = fileName;
+        const fileInput = document.getElementById('audio-upload');
+        const fileNameSpan = document.getElementById('file-name');
+        const form = document.getElementById('audio-form');
+        const mainTheme = document.getElementById('main-theme-text');
+        const agenda = document.getElementById('agenda-text');
+
+        fileInput.addEventListener('change', function() {
+            fileNameSpan.textContent = fileInput.files.length > 0
+                ? fileInput.files[0].name
+                : 'No file selected';
         });
 
-        // Handle form submission
-        document.getElementById('audio-form').addEventListener('submit', function(e) {
+        form.addEventListener('submit', function(e) {
             e.preventDefault(); // Prevent page reload
-            // For demonstration, simply show the summary
-            document.getElementById('summary-section').style.display = 'block';
+            if (fileInput.files.length > 0) {
+                mainTheme.value = "Main theme: Discussing quarterly performance and product roadmap.";
+                agenda.value = `1. Introduction and goals\n2. Sales overview\n3. Product development updates\n4. Marketing strategy\n5. Q&A`;
+            } else {
+                mainTheme.value = "Please upload an audio file first.";
+                agenda.value = "";
+            }
         });
     </script>
 </body>

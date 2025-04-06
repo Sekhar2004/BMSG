@@ -6,7 +6,6 @@
     <title>Summarize the Audio - BMSG</title>
     <link rel="stylesheet" href="css/service2.css">
     <link rel="stylesheet" href="css/header.css">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -35,7 +34,7 @@
             <h1>Summarize the Audio</h1>
             <p>From rambling riffs to insightful briefs. Get a concise summary of your audio files.</p>
     
-            <form>
+            <form id="summarize-form">
                 <label for="audio-upload">Upload Your Audio File:</label>
                 <div class="file-upload">
                     <input type="file" id="audio-upload" name="audio-upload" accept="audio/*">
@@ -50,7 +49,6 @@
             </div>
         </div>
     </section>
-    
 
     <footer class="footer">
         <div class="container">
@@ -59,11 +57,26 @@
     </footer>
 
     <script>
-        function updateFileName() {
-            const fileInput = document.getElementById('audio-upload');
-            const fileName = document.getElementById('file-name');
-            fileName.textContent = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file selected';
-        }
+        const fileInput = document.getElementById("audio-upload");
+        const fileNameSpan = document.getElementById("file-name");
+        const form = document.getElementById("summarize-form");
+        const summaryBox = document.getElementById("summary-text");
+
+        fileInput.addEventListener("change", () => {
+            fileNameSpan.textContent = fileInput.files.length > 0
+                ? fileInput.files[0].name
+                : "No file selected";
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form from submitting normally
+            if (fileInput.files.length > 0) {
+                fileNameSpan.textContent = fileInput.files[0].name;
+                summaryBox.value = "Summarizing audio... (This is a placeholder)";
+            } else {
+                summaryBox.value = "Please upload an audio file first.";
+            }
+        });
     </script>
 </body>
 </html>
